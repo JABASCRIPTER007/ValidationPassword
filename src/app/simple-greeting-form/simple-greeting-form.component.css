@@ -1,0 +1,22 @@
+.password-strength {
+  display: flex;
+  justify-content: space-between;
+}
+
+.strength-indicator {
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.weak {
+  background-color: red;
+}
+
+.medium {
+  background-color: yellow;
+}
+
+.strong {
+  background-color: green;
+}

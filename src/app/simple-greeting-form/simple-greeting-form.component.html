@@ -1,0 +1,22 @@
+<form>
+
+  <label for="password">Пароль:</label>
+  <input type="password"  id="password" name="password" [(ngModel)]="password" (input)="validatePassword()">
+
+  <div class="password-strength">
+
+    <div class="strength-indicator weak" [ngClass]="{isWeak}" [ngStyle]="{'background-color': Weak}">
+      <span></span>
+    </div>
+
+    <div class="strength-indicator medium" [ngClass]="{isMedium}" [ngStyle]="{'background-color': Medium}">
+      <span></span>
+    </div>
+
+    <div class="strength-indicator strong" [ngClass]="{isStrong}" [ngStyle]="{'background-color': Strong}">
+      <span></span>
+    </div>
+
+  </div>
+
+</form>
