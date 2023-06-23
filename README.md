@@ -1,27 +1,32 @@
-# App
+# Project "ValidationPassword"
+This project is an Angular application that includes multiple components for password strength validation and a simple greeting form.
+![Опис зображення](video.gif)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+## Libraries Used
+The project utilizes the following libraries:
+- Angular: The Angular framework is used for building the application.
+- @angular/forms: This library is used for working with forms and implementing form controls and validations.
+- @angular/core/testing: This library provides testing utilities for Angular components.
+- @angular/compiler/testing: This library provides testing utilities for compiling Angular components during testing.
 
-## Development server
+## Password Strength Validation
+The SimpleGreetingFormComponent component is responsible for password strength validation. It includes the following features:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- The component implements the ControlValueAccessor interface, which allows it to work with Angular forms and handle form control values.
+- The component includes an input field for entering a password. The [(ngModel)] directive is used for two-way data binding, binding the password value to the component property.
+- The component has three password strength indicators (weak, medium, and strong) represented by colored bars.
+- As the user types in the password input field, the password strength is validated based on the length and complexity of the password. The strength indicators change color to reflect the password strength.
+- The validatePassword() method evaluates the password and updates the indicators accordingly.
+- The component uses the onChange() and onTouched() methods to communicate changes and interaction with the form control.
+- The onPasswordChange() method is triggered when the password value changes, and it updates the password property and performs password validation.
 
-## Code scaffolding
+## Getting Started
+To run the project, follow these steps:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Install the necessary dependencies by running npm install in the project directory.
+2. Build and run the application using ng serve command.
+3. Access the application in your browser at http://localhost:4200.
 
-## Build
+Feel free to explore and modify the components and tests according to your requirements.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For more information, refer to the project's source code and documentation.
